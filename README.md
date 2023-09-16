@@ -22,8 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw 
 
   #### Je focus:
-  <!-- !!!! -->
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -32,21 +31,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Je website
-<!-- !!!! -->
 
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://trainmore.nl 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homescreen 
+  <img src="readme-images/homescreen.png" width="375px" alt="Op deze pagina krijg je informatie over het bedrijf">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/tweedepagina.png" width="375px" alt="Hier krijg je informatie over de personal trainers">
  
 </details>
 
@@ -56,9 +54,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
+ Tijdens dit test process heb ik een paar dingen uitgevonden. De screenreader test ging goed maar de Trainmore website is niet zo toegankelijk als ik dacht. De headings zijn niet allemaal duidelijk en geven niet altijd aan waar de content over gaat. Ze gebruiken vaak headings als grote, dikgedrukte text en dat zorg voor verwarring voor de screenreaders gebruikers. De links zijn allemaal wel duidelijk en lezen dit goed voor. 
+  Daarna zijn we de WCAG-test gaan doen en dit heeft heel duidelijk aangegeven dat de website niet toegankelijk is.
+  veel html elementen zijn niet goed aangegeven en de media op de website is leuk maar niet handig voor toegeankelijkheid. 
+  Conclusie is dat er nog best veel gedaan moet worden om dit website toegankelijk te maken.
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  <!--  -->
+ 
 
 </details>
 
