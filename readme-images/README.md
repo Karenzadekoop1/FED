@@ -38,17 +38,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je opdracht:
   https://trainmore.nl 
 
-  Trainmore is een sportschool in Nederland met heel veel verschillende vestegingen.
-  Hun motto is: " Een gym die je helpt om alles uit het leven te halen." 
-
-
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homescreen 
-  <img src="readme-images/homescreen.png" width="375px" alt="Op deze pagina krijg je informatie over het bedrijf">
+  <img src="readme-images/homescreen.png" width="375px" alt="Dit is de landingspagina met info over het bedrijf">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/tweedepagina.png" width="375px" alt="Hier krijg je informatie over de personal trainers">
+  Personal trainer   
+  <img src="readme-images/tweedepagina" width="375px" alt="Dit is de pagina waar de informatie krijg over de personal trainers en pakketen ">
  
 </details>
 
@@ -58,16 +54,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
-
- Tijdens dit test process heb ik een paar dingen uitgevonden. De screenreader test ging goed maar de Trainmore website is niet zo toegankelijk als ik dacht. De headings zijn niet allemaal duidelijk en geven niet altijd aan waar de content over gaat. Ze gebruiken vaak headings als grote, dikgedrukte text en dat zorg voor verwarring voor de screenreaders gebruikers. De links zijn allemaal wel duidelijk en lezen dit goed voor. 
-  Daarna zijn we de WCAG-test gaan doen en dit heeft heel duidelijk aangegeven dat de website niet toegankelijk is.
-  veel html elementen zijn niet goed aangegeven en de media op de website is leuk maar niet handig voor toegeankelijkheid. 
-  Conclusie is dat er nog best veel gedaan moet worden om dit website toegankelijk te maken.
+  Bij de eerste testen van mijn website ging ik aan de slag met "screen reader" Door gebruik te maken van VoiceOver op mijn laptop kwam ik achter dat sommige dingen niet heel duidelijk zijn zoals de headings van de website worden niet vaak gebruikt als headings maar gewoon als grote text op de paginas. De links/ buttons op de websites worden wel goed aangegeven met de screenreader en geven goed aan waar je naartoe wordt navigeert.
+  
+  Daarna ging ik verder met de WCAG checklist:
+  Het zag er allemaal heel goed uit met de checklist totdat ik kwam bij de media en animation.
+  De media moet niet automatisch afspelen en zou een optie moeten hebben om het te kunnen pauzeren maar dat heeft het niet.
 
   ### Bevindingen
-  -Headings zijn niet duidelijk aangegeven 
-  -Html moet netter geschreven worden
-  
+  Lijst met je bevindingen die in de test naar voren kwamen:
+  -headings met fotos eronder zijn niet duidelijk over waar de fotos over gaan maar gewoon grot stukken text
+  -videos kunnen niet stoppen en spelen vanzelf door. 
+
+
 </details>
 
 
@@ -98,34 +96,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Ik was meteen begonnen aan de HTML van de website. Ik vin HTML persoonlijk best makkelijkdus had niet veel moeite met het opzet van "nette" html. Had alleen wat vragen die ik wilde stellen maar dat ging over kleine dingen zoals "att atributes" en "hoe je het beste hidden headers kan gebruiken. Voorderest gebruik ik verschillende sections om de site goed op te delen en maak gebruik van header main en footer om later makkelijker te selecteren. 
-
-<img src="readme-images/html-ss.png" width="375px" alt="html pagina screenshot">
-<img src="readme-images/html-ss2.png" width="375px" alt="html pagina screenshot">
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Karenza        | Hidde              | student 3    | student 4        |
+  | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | Headers, aria  |                    | en ik dit    | en dan ik dat    |
-  | labels,        |                    | nog een punt | dit wil ik zeker |
-  | dropdown       |                    | ...          | ...              |
+  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Html opzet moet netter (eerst header etc )
-  - Aria lables zijn voor dingen die geen text hebben maar wel opgelezen moeten worden
-  - Dropdown menus doe je met "details en summary"
-  - Geen design elementen zetten in de Html (geen <br> en width etc)
-  - Elke section moet een header hebben 
-  <!-- - Mijn website heeft ook engelse woorden erin, kan ik deze laten/ is dit handig  -->
-  <!-- hoe moeten alt atributes uitgelegd worden / Alt text moet beter uitgelegd worden -->
+  - punt 1
+  - punt 2
+  - nog een punt
+  - ...
 
 </details>
+
+
 
 
 
