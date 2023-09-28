@@ -47,7 +47,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/homescreen.png" width="375px" alt="Op deze pagina krijg je informatie over het bedrijf">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Personal training 
   <img src="readme-images/tweedepagina.png" width="375px" alt="Hier krijg je informatie over de personal trainers">
  
 </details>
@@ -65,8 +65,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Conclusie is dat er nog best veel gedaan moet worden om dit website toegankelijk te maken.
 
   ### Bevindingen
-  -Headings zijn niet duidelijk aangegeven 
-  -Html moet netter geschreven worden
+  - Headings zijn niet duidelijk aangegeven 
+  - Html moet netter geschreven worden
   
 </details>
 
@@ -105,13 +105,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  1e meeting ging wat anders dan de andere
 
-  | Karenza        | Hidde              | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | Headers, aria  |                    | en ik dit    | en dan ik dat    |
-  | labels,        |                    | nog een punt | dit wil ik zeker |
-  | dropdown       |                    | ...          | ...              |
+  | Karenza        | Hidde              | 
+  | ---            | ---                | 
+  | Headers, aria  |                    | 
+  | labels,        |                    | 
+  | dropdown       |                    | 
 
 
   ### Verslag van meeting
