@@ -124,6 +124,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Elke section moet een header hebben 
   <!-- - Mijn website heeft ook engelse woorden erin, kan ik deze laten/ is dit handig  -->
   <!-- hoe moeten alt atributes uitgelegd worden / Alt text moet beter uitgelegd worden -->
+  <!-- font face uitleg aub  -->
+  <!-- flexbox of grid  -->
+  <!-- marquee styling -->
 
 </details>
 

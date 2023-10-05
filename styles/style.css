@@ -1,31 +1,160 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #eee;
+	--color-logo: #111;
+	--color-buttons: #EC3649;
+	--color-hover: #7b7b7b;
 }
 
-
-
-
+/* darkmode (hetzelfde maar omgedraait)*/
+@media (prefers-color-scheme:dark) {
+	:root {
+		--color-logo: #eee;
+		--color-text: #eee;
+		--color-background: #111;
+		--color-buttons: #EC3649;
+		--color-hover: #3a3a3a;
+	}
+}
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+
+/* **** */
+/* body */
+/* **** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* (
+	font-family: 'Roboto Condensed', sans-serif;
+) */
+
+body {
+	background-color: var(--color-background);
+}
+
+/**********/
+/* header */
+/* ****** */
+
+header {
+	position: sticky;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: .5em;
+	background-color: var(--color-background)
+}
+
+header nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1em;
+	margin-top: 2em;
+}
+
+/* logo */
+header svg {
+	fill: var(--color-logo);
+	height: 3em;
+}
+
+header nav ul {
+	display: flex;
+	gap: 2em;
+}
+
+header nav li {
+	list-style: none;
+}
+
+header a {
+	text-decoration: none;
+	color: var(--color-text);
+
+}
+
+header ul li:last-of-type {
+	font-weight: bold;
+}
+
+header a:hover {
+	text-decoration: underline;
+	color: var(--color-hover);
+}
+
+
+
+
+/* *************** */
+/* hidden headers  */
+/* *************** */
+.visually-hidden {
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
+/* ************** */
+/* section one    */
+/* ****************/
+
+section:nth-of-type(1){
+	display: flex;
+	flex-direction: column;
+}
+
+
+section:nth-of-type(1) h2{
+	text-transform: uppercase;
+	align-self: flex-start;
+
+}
+
+section:nth-of-type(1) article{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2em;
+}
+
+section:nth-of-type(1) p{
+	max-width: 15em;
+}
+
+section:nth-of-type(1) img{
+	order: -1;
+	align-self: flex-start;
+	width: 100%;
+}
+
+/* ********* */
+/* section 2 */
+/* ********* */
+
+section:nth-of-type(2) marquee {
+	font-size: 10em;
+	
+}
+
+
 
