@@ -1,0 +1,380 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-text: #111;
+    --color-extrabackground: #F5F5F5;
+    --color-logo: #111;
+    --color-buttons: #EC3649;
+    --color-hover: #7b7b7b;
+    --color-background: #ffffff;
+}
+
+/* darkmode (hetzelfde maar omgedraait)*/
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-logo: #eee;
+        --color-text: #eee;
+        --color-background: #111;
+        --color-buttons: #EC3649;
+        --color-hover: #3a3a3a;
+
+    }
+}
+
+
+/* ************** */
+/* section one    */
+/* ****************/
+
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-extrabackground);
+}
+
+section:nth-of-type(1) div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    margin-top: -2em;
+    width: 90%;
+    background-color: var(--color-extrabackground);
+}
+
+section:nth-of-type(1) article {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+
+}
+
+section:nth-of-type(1) img {
+    order: -1;
+    align-self: flex-start;
+    width: 100%;
+}
+
+section:nth-of-type(1) h2 {
+    align-self: center;
+    text-transform: uppercase;
+    font-family: 'integral', sans-serif;
+    font-size: 5vw;
+    
+}
+
+section:nth-of-type(1) p {
+    align-self: center;
+    font-family: 'roboto', sans-serif;
+    width: clamp(15em, 50vw, 20em);
+}
+
+section:nth-of-type(1) a {
+    color: var(--color-text);
+}
+
+@media (min-width: 38em) {
+    section:nth-of-type(1) div:first-of-type {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    section:nth-of-type(1) article {
+        display: grid;
+        grid-template-columns: 15em 15em;
+        grid-template-rows: 7em 7em;
+        gap: 3em;
+        justify-items: center;
+        position: relative;
+        left: 10em;
+        top: 3em;
+    }
+
+    section:nth-of-type(1) p {
+        width: 100%;
+        text-align: left;
+        margin-top: 1em;
+
+    }
+
+    section:nth-of-type(1) img {
+        width: 90%;
+        align-self: flex-end;
+    }
+}
+
+@media (min-width: 60em){
+    section:nth-of-type(1) article{
+        align-self: center;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* ********* */
+/* buttons   */
+/* ********* */
+
+main button {
+    position: relative;
+    left: 15%;
+    right: 45%;
+    bottom: 1em;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    background-color: var(--color-buttons);
+    border: none;
+    color: var(--color-background);
+    cursor: pointer;
+
+}
+
+main button:focus {
+    border: 2em var(--color-buttons);
+}
+
+/* bron van alle buttons: https://codepen.io/yvana/pen/XWJMKxg */
+
+main button:hover {
+    background-color: var(--color-buttons);
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px var(--color-logo);
+}
+
+main button:focus {
+    border: 1em var(--color-buttons);
+}
+
+
+/* ********* */
+/* section 3 */
+/* ********* */
+
+/* codepen van docent gebruikt om scroll in het midden. */
+
+section:nth-of-type(3) {
+    padding: 1em;
+    background-color: var(--color-extrabackground);
+}
+
+section:nth-of-type(3) h3 {
+    margin-left: 1em;
+    white-space: pre-line;
+    font-family: 'integral', sans-serif;
+    font-size: 1.5em;
+}
+
+section:nth-of-type(3) ul {
+    display: inline-flex;
+    align-items: start;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    overflow-x: auto;
+    gap: 2em;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    width: min(100%, 52em);
+    height: auto;
+}
+
+
+section:nth-of-type(3) ul li {
+    position: relative;
+    scroll-snap-align: center;
+    min-width: 25vw;
+    max-width: 38vw;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+}
+
+section:nth-of-type(3) ul li:nth-of-type(2) {
+    align-self: center;
+}
+
+section:nth-of-type(3) ul li h4 {
+    position: absolute;
+    color: var(--color-background);
+    font-family: 'integral', sans-serif;
+    font-size: 2vw;
+    inset: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgba(0 0 0 / 1));
+
+}
+
+section:nth-of-type(3) img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 38em){
+   section:nth-of-type(3) ul{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       height: auto;
+   }
+}
+
+
+
+/* ********* */
+/* section 5 */
+/* ********* */
+
+section:nth-of-type(5) {
+    position: relative;
+    background-color: var(--color-background);
+    font-family: 'integral', sans-serif;
+
+}
+
+
+
+section:nth-of-type(5) h3 {
+    margin-left: 1em;
+    white-space: pre-line;
+    font-size: 1.5em;
+
+}
+
+
+section:nth-of-type(5) ul li {
+    list-style: none;
+    line-height: 5em;
+    font-size: .8em;
+}
+
+section:nth-of-type(5) ul li:hover {
+    padding-left: 1em;
+    cursor: url(../images/cursorplus.png) 32 32, auto
+}
+
+/* bron:https://www.freecodecamp.org/news/how-to-make-a-custom-mouse-cursor-with-css-and-javascript/ */
+
+section:nth-of-type(5) ul li:focus {
+    border: 1em var(--color-buttons);
+}
+
+section:nth-of-type(5) ul li ul {
+    line-height: 2em;
+}
+
+section:nth-of-type(5) summary {
+    line-height: 2em;
+    font-size: 4vw;
+}
+
+
+section:nth-of-type(5) a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.5em;
+}
+
+section:nth-of-type(5) img {
+    position: relative;
+    left: 25em;
+    top: -15em;
+    width: auto;
+    height: 40vw;
+
+}
+
+
+@media (max-width:50em) {
+    section:nth-of-type(5) img {
+        display: none;
+    }
+}
+
+/* ********* */
+/* section 6 */
+/* ********* */
+
+/* codepen van docent gebruikt om scroll in het midden. */
+
+
+section:nth-of-type(6) {
+    padding: 1em;
+    background-color: var(--color-extrabackground);
+
+
+}
+
+section:nth-of-type(6) h3 {
+    margin-left: 1em;
+    white-space: pre-line;
+    font-family: 'integral', sans-serif;
+    font-size: 1.5em;
+
+}
+
+section:nth-of-type(6) ul {
+    display: inline-flex;
+    align-items: start;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    overflow-x: auto;
+    gap: 2em;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    width: min(100%, 52em);
+    height: auto;
+}
+
+
+section:nth-of-type(6) ul li {
+    position: relative;
+    scroll-snap-align: center;
+    min-width: 25vw;
+    max-width: 38vw;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+}
+
+section:nth-of-type(6) ul li:nth-of-type(2) {
+    align-self: center;
+}
+
+section:nth-of-type(6) ul li h4 {
+    position: absolute;
+    color: var(--color-background);
+    font-family: 'integral', sans-serif;
+    font-size: 2vw;
+    inset: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgba(0 0 0 / 1));
+
+}
+
+section:nth-of-type(6) img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 38em) {
+    section:nth-of-type(6) ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+}

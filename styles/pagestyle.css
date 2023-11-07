@@ -1,0 +1,378 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-text: #111;
+    --color-extrabackground: #F5F5F5;
+    --color-logo: #111;
+    --color-buttons: #EC3649;
+    --color-hover: #7b7b7b;
+    --color-background: #ffffff;
+}
+
+/* darkmode (hetzelfde maar omgedraait)*/
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-logo: #eee;
+        --color-text: #eee;
+        --color-background: #111;
+        --color-buttons: #EC3649;
+        --color-hover: #3a3a3a;
+
+    }
+}
+
+/* ************** */
+/* section one    */
+/* ****************/
+
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+}
+
+section:nth-of-type(1) div:nth-of-type(1) {
+    width: 90%;
+    margin-top: -20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-extrabackground);
+    /* height: 50em; */
+}
+
+section:nth-of-type(1) div:nth-of-type(1) h1 {
+    text-transform: uppercase;
+    align-self: center;
+    font-family: 'integral', sans-serif;
+    font-size: 5vw;
+    white-space: pre-line;
+    line-height: 1em;
+}
+
+section:nth-of-type(1) img {
+    order: -1;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) p {
+    align-self: center;
+    font-family: 'roboto', sans-serif;
+    /* font-size: 1em; */
+    line-height: 1.5em;
+    width: clamp(5em, 50vw, 25em);
+}
+
+@media (min-width: 50em) {
+    section:nth-of-type(1) div:nth-of-type(1) p {
+        width: 20em;
+    }
+}
+
+section:nth-of-type(1) div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    height: 15em;
+    width: 90%;
+
+    gap: 1em;
+    background-color: var(--color-logo);
+    color: var(--color-extrabackground);
+
+}
+
+section:nth-of-type(1) div:nth-of-type(2) h4 {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.3em;
+}
+
+section:nth-of-type(1) div:nth-of-type(2) button {
+    font-family: 'robotobold', sans-serif;
+    font-size: 1em;
+    color: var(--color-background);
+    padding: .5em;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    background-color: var(--color-logo);
+    border: solid;
+    border-color: var(--color-background);
+    cursor: pointer;
+}
+
+section:nth-of-type(1) div:nth-of-type(2) button:hover {
+    background-color: var(--color-logo);
+    color: var(--color-text);
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px var(--color-background);
+}
+
+section:nth-of-type(1) div:nth-of-type(2) button:focus {
+    border: 1em var(--color-buttons);
+}
+
+/* ********** */
+/* section 2 */
+/* ********* */
+
+section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+section:nth-of-type(2) div {
+    background-color: var(--color-extrabackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -55vw;
+    width: 90%;
+    height: 55em;
+
+}
+
+
+
+section:nth-of-type(2) div h2 {
+    font-family: 'integral', sans-serif;
+    font-size: 4vw;
+    white-space: pre-line;
+    align-self: center;
+}
+
+section:nth-of-type(2) div p {
+    align-self: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    width: clamp(5em, 50vw, 30em);
+}
+
+section:nth-of-type(2) img {
+    order: -1;
+    z-index: -100;
+    width: 90%;
+    /* height: 80vw; */
+    align-self: flex-end;
+
+}
+
+section:nth-of-type(2) div button {
+    font-family: 'robotobold', sans-serif;
+    font-size: 1em;
+    color: var(--color-logo);
+    padding: .5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: var(--color-extrabackground);
+    border: solid;
+    border-color: var(--color-logo);
+    cursor: pointer;
+}
+
+section:nth-of-type(2) div button:hover {
+    background-color: var(--color-extrabackground);
+    color: var(--color-background);
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px var(--color-logo);
+}
+
+section:nth-of-type(2) div button:focus {
+    border: 1em var(--color-buttons);
+}
+
+/* ********* */
+/* section 3 */
+/* ********* */
+
+section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+
+}
+
+section:nth-of-type(3) div {
+    background-color: var(--color-extrabackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: -55vw;
+    width: 80%;
+    height: 45em;
+}
+
+
+
+section:nth-of-type(3) div h2 {
+    font-family: 'integral', sans-serif;
+    font-size: 4vw;
+    white-space: pre-line;
+    align-self: center;
+}
+
+section:nth-of-type(3) div ol {
+    align-self: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    width: clamp(15em, 50vw, 20em);
+}
+
+
+section:nth-of-type(3) div p {
+    align-self: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    width: clamp(5em, 50vw, 30em);
+}
+
+section:nth-of-type(3) img {
+    order: -1;
+    z-index: -100;
+    width: 90%;
+    align-self: flex-start;
+
+}
+
+section:nth-of-type(3) div button {
+    font-family: 'robotobold', sans-serif;
+    font-size: 1em;
+    color: var(--color-logo);
+    padding: .5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: var(--color-extrabackground);
+    border: solid;
+    border-color: var(--color-logo);
+    cursor: pointer;
+}
+
+section:nth-of-type(3) div button:hover {
+    background-color: var(--color-extrabackground);
+    color: var(--color-background);
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px var(--color-logo);
+}
+
+
+section:nth-of-type(3) div button:focus {
+    border: 1em var(--color-buttons);
+}
+
+
+/* ********* */
+/* section 4 */
+/* ********* */
+
+section:nth-of-type(4) {
+    padding: 1em;
+    background-color: var(--color-extrabackground);
+
+
+}
+
+section:nth-of-type(4) h3 {
+    margin-left: 1em;
+    white-space: pre-line;
+    font-family: 'integral', sans-serif;
+    font-size: 1.5em;
+
+}
+
+section:nth-of-type(4) ul {
+    display: inline-flex;
+    align-items: start;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    overflow-x: auto;
+    gap: 2em;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    width: min(100%, 52em);
+    height: auto;
+}
+
+
+section:nth-of-type(4) ul li {
+    position: relative;
+    scroll-snap-align: center;
+    min-width: 25vw;
+    max-width: 38vw;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+}
+
+section:nth-of-type(4) ul li:nth-of-type(2) {
+    align-self: center;
+}
+
+section:nth-of-type(4) ul li h4 {
+    position: absolute;
+    color: var(--color-background);
+    font-family: 'integral', sans-serif;
+    font-size: 1em;
+    inset: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgba(0 0 0 / 1));
+
+}
+
+section:nth-of-type(4) img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 38em) {
+    section:nth-of-type(4) ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* ******************* */
+/* section 5 (marquee) */
+/* ******************* */
+
+
+section:nth-of-type(5) button {
+    position: relative;
+    left: 15%;
+    right: 45%;
+    bottom: 1em;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    background-color: var(--color-buttons);
+    border: none;
+    color: var(--color-background);
+    cursor: pointer;
+}
+
+section:nth-of-type(5) button:hover {
+    background-color: var(--color-buttons);
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px var(--color-logo);
+}
+
+section:nth-of-type(5) button:focus {
+    border: 1em var(--color-buttons);
+}

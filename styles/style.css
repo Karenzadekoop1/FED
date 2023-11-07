@@ -12,10 +12,11 @@
 /*********************/
 :root {
 	--color-text: #111;
-	--color-background: #eee;
+	--color-extrabackground: #F5F5F5;
 	--color-logo: #111;
 	--color-buttons: #EC3649;
 	--color-hover: #7b7b7b;
+	--color-background: #ffffff;
 }
 
 /* darkmode (hetzelfde maar omgedraait)*/
@@ -37,19 +38,36 @@
 /* **** */
 /* body */
 /* **** */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
-/* (
-	font-family: 'Roboto Condensed', sans-serif;
-) */
+/* kan mooier :) maar is duidelijker voor mij zo */
 
-body {
-	background-color: var(--color-background);
+@font-face {
+	font-family: "roboto";
+	src: url(../fonts/RobotoCondensed-Regular.ttf);
 }
 
-/**********/
-/* header */
-/* ****** */
+@font-face {
+	font-family: "robotobold";
+	src: url(../fonts/RobotoCondensed-Bold.ttf);
+	font-weight: bold;
+}
+
+
+@font-face {
+	font-family: "integral";
+	src: url(../fonts/integral-bold.otf);
+	font-weight: bold;
+}
+
+body {
+	background-color: var(--color-white);
+	margin: 0;
+}
+
+/***********************/
+/* header  *********** */
+/* bron:dlo oefeningen */
+/* *********************/
 
 header {
 	position: sticky;
@@ -57,45 +75,109 @@ header {
 	right: 0;
 	top: 0;
 	padding: .5em;
-	background-color: var(--color-background)
+	background-color: var(--color-white)
 }
 
 header nav {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	margin: 1em;
-	margin-top: 2em;
+	align-items: center;
+	order: -1;
 }
 
 /* logo */
 header svg {
-	fill: var(--color-logo);
-	height: 3em;
+	fill: var(--color-text);
+	height: 1em;
+	z-index: 100;
+}
+
+header svg.ikBenNuWit {
+	fill: white;
 }
 
 header nav ul {
 	display: flex;
-	gap: 2em;
+	flex-direction: column;
+	align-content: start;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	translate: 100% 0%;
+	transition: translate .3s;
+	background-color: var(--color-text);
 }
 
-header nav li {
+header nav.toonMenu ul {
+	translate: 0% 0%;
+}
+
+header nav ul li {
+	margin-top: 3em;
 	list-style: none;
-}
-
-header a {
-	text-decoration: none;
+	font-family: 'integral', sans-serif;
 	color: var(--color-text);
-
 }
 
-header ul li:last-of-type {
-	font-weight: bold;
+header ul li a {
+	text-decoration: none;
+	color: var(--color-background);
 }
 
 header a:hover {
 	text-decoration: underline;
+	text-underline-offset: 1em;
 	color: var(--color-hover);
+}
+
+header a:focus{
+	border: 1em var(--color-buttons);
+}
+
+header nav button {
+	display: grid;
+	place-items: center;
+	position: relative;
+	right: 0;
+	z-index: 100;
+	border: none;
+}
+
+header nav button:focus{
+	border: 1em var(--color-buttons);
+}
+
+header nav button span {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	width: 1.2em;
+	height: .2em;
+	background-color: var(--color-text);
+	transition-duration: .5s;
+}
+
+header nav button span:nth-of-type(1) {
+	transform: translateY(-.4em);
+}
+
+header nav button span:nth-of-type(3) {
+	transform: translateY(.4em);
+}
+
+header nav button[aria-expanded="true"] span:nth-of-type(1) {
+	transform: rotate(45deg) scalex(1.25);
+	background-color: var(--color-background);
+}
+
+header nav button[aria-expanded="true"] span:nth-of-type(2) {
+	opacity: 0;
+}
+
+header nav button[aria-expanded="true"] span:nth-of-type(3) {
+	transform: rotate(-45deg) scalex(1.25);
+	background-color: var(--color-background);
 }
 
 
@@ -114,47 +196,213 @@ header a:hover {
 	white-space: nowrap;
 }
 
-/* ************** */
-/* section one    */
-/* ****************/
+/* bron:chatgpt skiplink */
 
-section:nth-of-type(1){
-	display: flex;
-	flex-direction: column;
+.skip-link {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	text-align: left;
+	clip: rect(1px, 1px, 1px, 1px);
+	background-color:var(--color-logo);
+	color:var(--color-background);
+	z-index: 10000;
 }
 
-
-section:nth-of-type(1) h2{
-	text-transform: uppercase;
-	align-self: flex-start;
-
+.skip-link:focus {
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	width: auto;
+	height: auto;
+	clip: auto;
 }
 
-section:nth-of-type(1) article{
+/* ********* */
+/* marquees */
+/* ********* */
+
+
+marquee {
+	position: relative;
+	font-size: 8vw;
+	font-family: 'integral', sans-serif;
+}
+
+/* ****** */
+/* footer */
+/* ****** */
+
+footer{
+	font-family: 'roboto', sans-serif;
+	background-color: var(--color-logo);
+	padding: 1em;
+}
+
+footer ul{
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	gap: 2em;
+	justify-content: space-between;
 }
 
-section:nth-of-type(1) p{
-	max-width: 15em;
+footer ul li ul {
+	display: flex;
+	flex-direction: column;
+	line-height: 2em;
 }
 
-section:nth-of-type(1) img{
-	order: -1;
-	align-self: flex-start;
-	width: 100%;
+footer h4{
+	color: var(--color-background);
+	font-size: 1em;
 }
 
-/* ********* */
-/* section 2 */
-/* ********* */
+footer h3{
+	color: var(--color-background);
+}
 
-section:nth-of-type(2) marquee {
-	font-size: 10em;
+footer a{
+	color:var(--color-background);
+	text-decoration: none;
+}
+
+footer a:hover{
+	padding-left: .5em;
+	color: var(--color-background);
+	text-decoration: none;
+}
+
+footer a:focus{
+	border: 1em var(--color-buttons);
+}
+
+footer svg {
+	fill: var(--color-background);
+	height: 1em;
+	position: relative;
+	top: 1.5em;
+	left: 1em;
+	margin: 1em;
+}
+
+footer button{
+	padding: .8em;
+	font-family: 'robotobold', sans-serif;
+	font-size: 1em;
+}
+
+footer button:hover{
+	transition: all 1s;
+	-webkit-transform: rotateZ(30deg);
+	-ms-transform: rotateZ(30deg);
+	transform: rotateZ(30deg);
+}
+
+footer button:active{
+	border: solid .5em var(--color-buttons)
+}
+
+footer button:focus{
+	border: 1em var(--color-buttons);
+}
+
+
+@media (max-width:38em){
+	
+
+	footer{
+		display:flex;
+		flex-direction: column;
+		justify-content: start;
+	}
+
+	footer svg{
+		align-self: start;
+		margin: 2em
+	}
+
+	footer ul{
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer ul li ul{
+		display:none;
+	}
+}
+
+
+
+
+
+
+
+
+/* *********** */
+/* responsive */
+/* ********** */
+
+@media (min-width:38em) {
+
+	/* header */
+	/* bron:dlo voorbeelden gebruikt */
+
+	header {
+		background-color: var(--color-background);
+	}
+
+	header svg {
+		fill: var(--color-logo);
+		height: 1em;
+	}
+
+	header nav {
+		order: 10000;
+		margin: 0;
+
+	}
+
+	header nav button {
+		display: none;
+	}
+
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+		position: static;
+		translate: unset;
+		padding: 0;
+		background: none;
+		gap: 1.5em;
+		margin: 0;
+
+	}
+
+	header nav ul li {
+		flex-basis: unset;
+		flex-grow: unset;
+		font-family: 'robotobold', sans-serif;
+		font-size: 1em;
+		color: var(--color-background);
+
+	}
+
+	header nav ul li a {
+		color: var(--color-text);
+	}
+
+
 	
 }
 
 
 
+@media (min-width:54em) {
+
+	header>a:last-of-type,
+	nav a {
+		flex-direction: row;
+	}
+}
